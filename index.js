@@ -8,7 +8,6 @@ require("dotenv").config();
 
 const publicFolder = path.join(__dirname, "public");
 const viewPath = path.join(__dirname, "views");
-console.log(__dirname);
 
 app.set("view engine", "html");
 app.set("views", viewPath);
@@ -26,11 +25,9 @@ app.post("/api/airtable", jsonParser, function (req, res) {
     process.env.baseKey
   );
 
-  //CONSOLE LOG REQ.BODY TO SEE DATA.
   base("Table 1").create(
     [
       {
-        //ADD DATA HERE LIKE THE NAME ATTRIBUTE
         fields: {
           Name: req.body.name,
           "Roll Number": req.body.rollno,

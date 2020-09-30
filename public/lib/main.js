@@ -61,7 +61,6 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
     // Displaying results to console
     .then((json) => {
-      console.log("Sent back", json);
       document.querySelector("form").classList.add("is-hidden");
       document.querySelector("#success").classList.remove("is-hidden");
       //DO ERROR HANDLING HERE
