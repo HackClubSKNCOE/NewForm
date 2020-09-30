@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const Airtable = require("airtable");
 const app = express();
 const port = process.env.PORT || 8080;
+require("dotenv").config();
 
 const publicFolder = path.join(__dirname, "public");
 const viewPath = path.join(__dirname, "views");
@@ -21,9 +22,10 @@ app.get("/", function (req, res) {
 });
 
 app.post("/api/airtable", jsonParser, function (req, res) {
-  var base = new Airtable({ apiKey: "key8zR7SsdB8jUYdH" }).base(
-    "appmAiSAho6x4fa6a"
+  var base = new Airtable({ apiKey: process.env.apiKey }).base(
+    process.env.baseKey
   );
+
   //CONSOLE LOG REQ.BODY TO SEE DATA.
   base("Table 1").create(
     [
@@ -31,22 +33,22 @@ app.post("/api/airtable", jsonParser, function (req, res) {
         //ADD DATA HERE LIKE THE NAME ATTRIBUTE
         fields: {
           Name: req.body.name,
-          "Roll Number": "T20142",
-          Division: 1,
-          Year: ["TE"],
-          Branch: ["IT"],
+          "Roll Number": req.body.rollno,
+          Division: req.body.division,
+          Year: req.body.year,
+          Branch: req.body.branch,
         },
       },
     ],
     function (err, records) {
       if (err) {
         console.error(err);
-        return;
+        res.status(400).send({ err });
+      } else {
+        res.status(200).send({ data: records[0].fields });
       }
     }
   );
-
-  res.send({ data: req.body });
 });
 
 app.listen(port, () => {

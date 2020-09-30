@@ -135,7 +135,7 @@
                         <div class="field">
                             <label class="label has-text-left">Name</label>
                             <div class="control">
-                                <input required class="input" value="s" name="fullname" type="text"
+                                <input required class="input" name="fullname" type="text"
                                     placeholder="Microsoft Teams Name" />
                             </div>
                         </div>
@@ -144,8 +144,7 @@
                         <div class="field">
                             <label class="label has-text-left">Roll Number</label>
                             <div class="control">
-                                <input required class="input" name="Roll" type="text" value="s"
-                                    placeholder="Ex. T20142" />
+                                <input required class="input" name="Roll" type="text" placeholder="Ex. T20142" />
                             </div>
                         </div>
 
@@ -153,8 +152,7 @@
                         <div class="field">
                             <label class="label has-text-left">Division</label>
                             <div class="control">
-                                <input required class="input" name="Division" value="1" type="number"
-                                    placeholder="Division" />
+                                <input required class="input" name="Division" type="number" placeholder="Division" />
 
                             </div>
                         </div>
@@ -205,6 +203,55 @@
             </div>
         </section>
     </form>
+
+    <section class="section is-large  is-hidden" id="success">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <article class="message is-success">
+                        <div class="message-body">
+                            <p class="title">Your response has been submitted. </p>
+                            <p class="title is-5">
+                                This project was made by <br />
+                                <strong><a href="http://skn.hackclub.com/">Hack Club, SKNCOE</a> </strong>
+                                with love and lot's of sanitizers!
+                            </p>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section class="section is-large is-hidden" id="unsuccess">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <article class="message is-danger">
+                        <div class="message-body">
+                            <p class="title">This is embarrassing, something went wrong. </p>
+                            <p class="title is-5">
+                                Resubmit the form or contact the respective faculty.
+
+                            </p>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
 
 
     <footer class="footer">

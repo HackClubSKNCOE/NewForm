@@ -51,11 +51,23 @@ document.querySelector("form").addEventListener("submit", function (e) {
     },
   })
     // Converting to JSON
-    .then((response) => response.json())
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Something went wrong");
+      }
+    })
 
     // Displaying results to console
     .then((json) => {
-      console.log(json);
+      console.log("Sent back", json);
+      document.querySelector("form").classList.add("is-hidden");
+      document.querySelector("#success").classList.remove("is-hidden");
       //DO ERROR HANDLING HERE
+    })
+    .catch((error) => {
+      document.querySelector("form").classList.add("is-hidden");
+      document.querySelector("#unsuccess").classList.remove("is-hidden");
     });
 });
