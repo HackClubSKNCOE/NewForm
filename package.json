@@ -1,0 +1,29 @@
+{
+  "name": "newform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js --ext scss,html,js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackClubSKNCOE/NewForm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackClubSKNCOE/NewForm/issues"
+  },
+  "homepage": "https://github.com/HackClubSKNCOE/NewForm#readme",
+  "dependencies": {
+    "airtable": "^0.10.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
