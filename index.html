@@ -35,45 +35,11 @@
                         width="64"
                     />
 
-                    <a
-                        role="button"
-                        class="navbar-burger burger mt-1 px-1"
-                        aria-label="menu"
-                        aria-expanded="false"
-                        data-target="navbarBasicExample"
-                    >
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
-                </div>
-
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-start">
-                        <h5 class="mt-5 ml-2 title is-5">Hack Club | SKNCOE</h5>
-                    </div>
-
-                    <div class="navbar-end">
-                        <a
-                            onclick="scrollToSection('canvas')"
-                            class="navbar-item"
-                        >
-                            Home
-                        </a>
-
-                        <a href="/about" class="navbar-item"> About us </a>
-
-                        <a
-                            onclick="scrollToPage('team')"
-                            class="navbar-item mr-3"
-                        >
-                            Team
-                        </a>
-
-                        <div class="buttons is-danger is-rounded">
-                            <a href="/join" class="button is-danger is-rounded">
-                                <strong>Join us</strong>
-                            </a>
+                    <div id="navbarBasicExample">
+                        <div class="navbar-start">
+                            <h5 class="mt-5 ml-2 title is-5">
+                                Hack Club | SKNCOE
+                            </h5>
                         </div>
                     </div>
                 </div>
@@ -206,9 +172,12 @@
             <div class="hero-body">
                 <div class="container has-text-centered typewriter">
                     <h1 class="title is-1">
-                        Fill the below form
-                        <span class="has-text-danger"> to join us.</span>
+                        Attendance
+                        <span class="has-text-danger"> Tracker</span>
                     </h1>
+                    <h2 class="subtitle" style="font-size: 1.5rem;">
+                        Update your name below & start recording Attendance
+                    </h2>
                     <button
                         class="button is-danger is-rounded"
                         onclick="scrollToSection('form')"
@@ -229,19 +198,20 @@
                 padding: 50px 0;
             "
         >
+      
+
+        <section id="form">
+            <div class="emptyArea" style="height: 80px;"></div>
             <h1 style="color: red; font-size: 1.5rem">*Important*</h1>
             <p align="justify">
-                Please use the ORIGINAL name and information (as documented in
-                college records) in order to assure proper attendance updation.
-                Any false information provided will result in lower attendance
-                percentage and further actions towards anyone responsible for
-                such.
+                Please use the MICROSOFT TEAMS name in order to assure proper attendance updation.
+                Strict actions against individuals will be taken for any false information.
             </p>
         </div>
 
         <!--Form Starts-->
         <form action="/send" , enctype="multipart/form-data" , method="POST">
-            <section class="section mt-2 mb-6" id="form">
+            <section class="section mt-2 mb-6">
                 <div class="container">
                     <!-- <h1 class="title">Form</h1>
 <h2 class="subtitle">Fill the form to get started!</h2> -->
@@ -257,7 +227,7 @@
                                         class="input"
                                         name="fullname"
                                         type="text"
-                                        placeholder="Your Full Name"
+                                        placeholder="Microsoft Teams Name"
                                     />
                                 </div>
                             </div>
@@ -272,8 +242,8 @@
                                         required
                                         class="input"
                                         name="Roll"
-                                        type="number"
-                                        placeholder="Roll Number"
+                                        type="text"
+                                        placeholder="Ex. T20142"
                                     />
                                 </div>
                             </div>
@@ -350,6 +320,7 @@
                 </div>
             </section>
         </form>
+    </section>
 
         <footer class="footer">
             <div class="content has-text-centered">
