@@ -49,5 +49,5 @@ app.post("/api/airtable", jsonParser, function (req, res) {
 });
 
 app.listen(port, () => {
-  console.log("Running Server at" + port);
+  console.log("Running Server at " + port);
 });

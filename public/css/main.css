@@ -2965,7 +2965,14 @@ a.tag:hover {
     .field-label.is-large {
       font-size: 1.5rem;
       padding-top: 0.375em; } }
-
+.box{
+  border: 7px solid #ea203c;
+  padding: 50px 15px;
+  margin: 5px 10px 10px 10px;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
 .field-body .field .field {
   margin-bottom: 0; }
 
