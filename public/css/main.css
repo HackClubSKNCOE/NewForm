@@ -1340,6 +1340,7 @@ a.box:active {
 
 .buttons {
   align-items: center;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; }
