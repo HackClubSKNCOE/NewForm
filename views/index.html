@@ -8,7 +8,7 @@
     <link rel="icon" href="img/logo1-min.png" />
     <title>Hack Club SKNCOE</title>
     <script src="https://kit.fontawesome.com/df67bacc25.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../public/css/main.css" />
     <!--I added this to use bulma, peviously it was css/main.css-->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
@@ -20,8 +20,8 @@
     <nav class="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand py-1 px-1">
-                <img id="navbarLogo  " onclick="window.location.href='/'" src="img/logo1-min.png" width="64" />
-
+                <img id="navbarLogo  " onclick="window.location.href='/'" src="../public/img/logo1-min.png"
+                    width="64" />
                 <div id="navbarBasicExample">
                     <div class="navbar-start">
                         <h5 class="mt-5 ml-2 title is-5">
@@ -120,8 +120,6 @@
             <div class="container">
                 <div class="columns is-centered">
 
-
-
                     <div class="column is-half has-text-centered">
                         <h1 style="color: red; font-size: 1.5rem" class="my-2">*Important*</h1>
                         <p class="subtitle is-5">
@@ -210,55 +208,43 @@
         </section>
     </form>
 
-    <section class="section is-large  is-hidden" id="success">
+    <section class="section is-large is-hidden" id="success">
         <div class="container">
             <div class="columns is-centered">
-                <div class="column is-6">
+                <div class="column is-5">
                     <article class="message is-success">
                         <div class="message-body">
-                            <p class="title">Your response has been submitted. </p>
-                            <p class="title is-5">
-                                This project was made by <br />
-                                <strong><a href="http://skn.hackclub.com/">Hack Club, SKNCOE</a> </strong>
-                                with love and lot's of sanitizers!
+                            <p class="title">Thank you!</p>
+                            <p class="title" style="font-size: 1.2em;">Your response has been submitted.</p>
+                            <p class="title is-5" style="font-size: 0.8em;">
+                                This project was made by <strong><a href="http://skn.hackclub.com/">Hack Club |
+                                        SKNCOE</a> </strong>
+                                <br>with love and lots of sanitizers!
                             </p>
-
                         </div>
                     </article>
-
                 </div>
             </div>
-
-
-
         </div>
     </section>
 
     <section class="section is-large is-hidden" id="unsuccess">
         <div class="container">
             <div class="columns is-centered">
-                <div class="column is-6">
+                <div class="column is-5">
                     <article class="message is-danger">
                         <div class="message-body">
-                            <p class="title">This is embarrassing, something went wrong. </p>
-                            <p class="title is-5">
-                                Resubmit the form or contact the respective faculty.
-
+                            <p class="title">Oh no!</p>
+                            <p class="title" style="font-size: 1.2em;">Something went wrong.</p>
+                            <p class="title is-5" style="font-size: 0.8em;">
+                                Please resubmit the form or contact <br> the respective faculty.
                             </p>
-
                         </div>
                     </article>
-
                 </div>
             </div>
-
-
         </div>
     </section>
-
-
-
-
 
     <footer class="footer">
         <div class="content has-text-centered">
@@ -301,8 +287,6 @@
             </div>
         </div>
     </footer>
-
-
 
     <script type="text/javascript" src="lib/main.js"></script>
 </body>
